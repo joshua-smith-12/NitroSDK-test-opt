@@ -105,7 +105,7 @@ static inline void MI_CpuClearFast (void * dest, u32 size)
 
 void MI_CpuFill8(void * dest, u8 data, u32 size);
 
-void MI_CpuCopy8(const void * src, void * dest, u32 size);
+void MI_CpuCopy8(const char * src, char * dest, u32 size);
 
 static inline void MI_CpuClear8 (void * dest, u32 size)
 {
