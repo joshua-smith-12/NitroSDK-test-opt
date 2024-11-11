@@ -18,7 +18,7 @@ cc = meson.get_compiler('c')
 
 if not meson.is_subproject() and buildtype != 'plain'
 c_args = [
-    '-O4,p',
+    '-O0,p',
     '-proc', 'arm946e',
     '-enum', 'int',
     '-lang', 'c99',
