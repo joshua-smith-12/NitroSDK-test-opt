@@ -510,10 +510,10 @@ asm void MI_Copy128B (register const void * pSrc, register void * pDest)
     }
 #endif
 
-void MI_CpuCopy8 (const char * srcp, char * dstp, u32 size)
+void MI_CpuCopy8 (const void * srcp, void * dstp, u32 size)
 {
     if (size == 0) return;
-    for (int i = 0; i < size; i++) dstp[i] = srcp[i];
+    for (int i = 0; i < size; i++) *dstp++ = *srcp++;
 }
 #ifdef NEVER_BUILD
 #ifdef SDK_SMALL_BUILD
